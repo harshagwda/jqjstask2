@@ -21,18 +21,13 @@ $(document).ready(function() {
 					if(is_url){input.removeClass("invalid").addClass("valid");}
 					else{input.removeClass("valid").addClass("invalid");}
 				});
-				$('.contact_password').keyup(function(event) {
-					var input=$(this);
-					var val= $('.contact_password').val()
-					if(val.length <= 8) {
-					$('.contact_password').addClass('invalid');
-    					
- 					 $('.contact_password').text("password length should be atleast 8chars")
-   						 
-  					}$('.contact_password')
-					
-					if(message){input.removeClass("invalid").addClass("valid");}
-					else{input.removeClass("valid").addClass("invalid");}	
+		$("#btn").click(function(){
+				 if($(".contact_password").val().length < 8){
+					 $(".contact_password").css("border-color", "red");
+				 }
+				 else{
+					 $(".contact_password").css("border-color", "initial");
+				 }
 				});
 
 
@@ -56,3 +51,5 @@ $("#contact_submit button").click(function(event){
 	}
 });
 });
+
+	 
